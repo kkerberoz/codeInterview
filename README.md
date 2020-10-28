@@ -1,7 +1,7 @@
 # Node.js API
 
 Create a `.env` file in the backend directory of your project. Add
-environment-specific variables on new lines in the form of `JWT_SECRET=VALUE`.
+JWT_SECRET variables on new lines in the form of `JWT_SECRET=VALUE`.
 For example:
 
 ```dosini
