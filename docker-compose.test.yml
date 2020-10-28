@@ -24,8 +24,6 @@ services:
     # Connect to other containers
     links:
       - db
-    # Restart action
-    restart: always
   ##########################
   ### SETUP DB CONTAINER
   ##########################
@@ -34,5 +32,3 @@ services:
     image: mongo
     ports:
       - 27017:27017
-    restart: always
-    command: --quiet

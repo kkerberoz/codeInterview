@@ -1,5 +1,14 @@
 # Node.js API
 
+Create a `.env` file in the root directory of your project. Add
+environment-specific variables on new lines in the form of `JWT_SECRET=VALUE`.
+For example:
+
+```dosini
+JWT_SECRET=secretttt
+
+```
+
 ### Run sever
 
 Run
