@@ -1,0 +1,38 @@
+version: "3.4"
+services:
+  ##########################
+  ### SETUP SERVER CONTAINER
+  ##########################
+  server:
+    container_name: backend
+    # Tell docker what file to build the backend from
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    # Environment variables
+    environment:
+      - PORT=5000
+      - NODE_ENV=development
+    # Port mapping
+    ports:
+      - 5000:5000
+    # Volumes to mount
+    volumes:
+      - "./backend/src:/app/backend/src"
+    # Run command
+    command: npm run dev
+    # Connect to other containers
+    links:
+      - db
+    # Restart action
+    restart: always
+  ##########################
+  ### SETUP DB CONTAINER
+  ##########################
+  db:
+    container_name: db_mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    restart: always
+    command: --quiet
