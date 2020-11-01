@@ -9,7 +9,7 @@ JWT_SECRET=secretttt
 
 ```
 
-### Run sever
+### Run server
 
 Run
 
